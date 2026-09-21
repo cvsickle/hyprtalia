@@ -1,38 +1,52 @@
-# hyprtalia &nbsp; [![bluebuild build badge](https://github.com/cvsickle/hyprtalia/actions/workflows/build.yml/badge.svg)](https://github.com/cvsickle/hyprtalia/actions/workflows/build.yml)
+# Hyprtalia
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+[![bluebuild build badge](https://github.com/cvsickle/hyprtalia/actions/workflows/build.yml/badge.svg)](https://github.com/cvsickle/hyprtalia/actions/workflows/build.yml) &nbsp; [![Dependabot Updates](https://github.com/cvsickle/hyprtalia/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/cvsickle/hyprtalia/actions/workflows/dependabot/dependabot-updates) &nbsp; [![renovate](https://github.com/cvsickle/hyprtalia/actions/workflows/renovate.yml/badge.svg)](https://github.com/cvsickle/hyprtalia/actions/workflows/renovate.yml) &nbsp; [![Repo sync (GitHub -> Codeberg)](https://github.com/cvsickle/hyprtalia/actions/workflows/sync_codeberg.yaml/badge.svg)](https://github.com/cvsickle/hyprtalia/actions/workflows/sync_codeberg.yaml)
 
-After setup, it is recommended you update this README to describe your custom image.
+---
+
+This repository is a custom [bootc](https://github.com/bootc-dev/bootc) image built on [Universal Blue](https://github.com/ublue-os/main).
+
+It was created using the [BlueBuild Workshop](https://workshop.blue-build.org/).
+
+## Changes made
+
+### System packages added
+
+- Everything needed for [LazyVim](https://github.com/lazyvim/lazyvim)
+  - [Neovim](https://github.com/neovim/neovim)
+  - [LazyGit](https://github.com/jesseduffield/lazygit)
+  - JetBrains Mono Nerd Font from [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
+  - Etc.
+- [starship](https://github.com/starship/starship)
+- [btop](https://github.com/aristocratos/btop)
+- [Helium Browser](https://github.com/imputnet/helium)
+- Swapped `tuned-ppd` for `power-profiles-daemon` for optimization on Framework 13 Pro. See the [Phoronix writeup](https://www.phoronix.com/review/fedora-pantherlake-thermald-tuned).
+- Docker CLI
+- Podman Compose
+- VS Code
+
+### Brew
+
+- [Bold Brew](https://github.com/Valkyrie00/bold-brew)
+- [Dev Container CLI](https://github.com/devcontainers/cli)
+- [LazyDocker](https://github.com/jesseduffield/lazydocker)
+
+### Flatpak
+
+- [Dev Toolbox](https://flathub.org/en/apps/me.iepure.devtoolbox)
+- [Easy Effects](https://flathub.org/en/apps/com.github.wwmm.easyeffects)
+- [File Roller](https://flathub.org/en/apps/org.gnome.FileRoller)
+- [Flatseal](https://flathub.org/en/apps/com.github.tchx84.Flatseal)
+- [Gear Lever](https://flathub.org/en/apps/it.mijorus.gearlever)
+- [LocalSend](https://flathub.org/en/apps/org.localsend.localsend_app)
+- [Podman Desktop](https://flathub.org/en/apps/io.podman_desktop.PodmanDesktop)
+- [qView](https://flathub.org/en/apps/com.interversehq.qView)
+- [SiriKali](https://flathub.org/en/apps/io.github.mhogomchungu.sirikali)
+- [Web Apps](https://flathub.org/en/apps/net.codelogistics.webapps)
 
 ## Installation
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
-
-To rebase an existing atomic Fedora installation to the latest build:
-
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/cvsickle/hyprtalia:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/cvsickle/hyprtalia:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
-
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
-
-## ISO
-
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/how-to/generate-iso/#_top). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+TODO
 
 ## Verification
 
@@ -41,3 +55,13 @@ These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](ht
 ```bash
 cosign verify --key cosign.pub ghcr.io/cvsickle/hyprtalia
 ```
+
+## Repository Mirrors
+
+TODO
+
+## Other custom OS images
+
+- [Bazzite DX](https://github.com/cvsickle/bazzite-dx)
+- [Bluefin DX](https://github.com/cvsickle/bluefin-dx)
+- [Zirconium](https://github.com/cvsickle/zirconium)
