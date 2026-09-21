@@ -1,0 +1,43 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+
+modules:
+  - type: dnf
+    repos:
+      copr:
+        - atim/starship
+        - dejan/lazygit
+        - imput/helium
+        - ublue-os/packages
+      nonfree: rpmfusion
+      keys:
+        - https://packages.microsoft.com/keys/microsoft.asc
+      cleanup: true
+    install:
+      packages:
+        # System utilities
+        - chrony
+        - ublue-setup-services
+        # Terminal utilities
+        - kitty
+        - fastfetch
+        - starship
+        - btop
+        - docker-cli
+        - podman-compose
+        # Lazyvim stuff
+        - neovim
+        - lazygit
+        - tree-sitter-cli
+        - fzf
+        - ripgrep
+        - fd-find
+        # Browser
+        - helium-bin
+        # Applications
+        - code
+    replace:
+      - from-repo: fedora
+        packages:
+          - old: tuned-ppd
+            new: power-profiles-daemon

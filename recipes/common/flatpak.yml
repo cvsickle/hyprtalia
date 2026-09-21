@@ -1,0 +1,21 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+
+modules:
+  - type: default-flatpaks
+    configurations:
+      - notify: false # Send notification after install/uninstall is finished (true/false)
+        scope: system
+        # If no repo information is specified, Flathub will be used by default
+        install: # system flatpaks we want all users to have and not remove
+          - com.github.wwmm.easyeffects # Audio effects and EQ
+          - it.mijorus.gearlever # Manage AppImages
+          - net.codelogistics.webapps # Manage Web Apps
+          - io.github.mhogomchungu.sirikali # GUI for managing encrypted volumes
+          - io.podman_desktop.PodmanDesktop # GUI for managing containers
+          - com.github.tchx84.Flatseal # GUI for managing Flatpak permissions
+          - com.interversehq.qView # Image viewer
+          - org.gnome.FileRoller # Archive manager
+          - me.iepure.devtoolbox # Handy developer tools
+          - org.localsend.localsend_app # Local file sharing app
+      - scope: user # Also add Flathub user repo, but no user packages
