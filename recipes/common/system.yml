@@ -5,6 +5,7 @@ modules:
   - type: systemd
     system:
       enabled:
+        - greetd
         - ublue-system-setup.service
         - chronyd.service
     user:

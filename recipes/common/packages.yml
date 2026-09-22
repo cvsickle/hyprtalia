@@ -8,6 +8,7 @@ modules:
         - atim/starship
         - dejan/lazygit
         - imput/helium
+        - lionheartp/Hyprland
         - ublue-os/packages
       nonfree: rpmfusion
       keys:
@@ -16,8 +17,9 @@ modules:
     install:
       packages:
         # System utilities
-        - chrony
+        - git
         - ublue-setup-services
+
         # Terminal utilities
         - kitty
         - fastfetch
@@ -25,17 +27,40 @@ modules:
         - btop
         - docker-cli
         - podman-compose
+
         # Lazyvim stuff
         - neovim
         - lazygit
         - tree-sitter-cli
-        - fzf
         - ripgrep
         - fd-find
+
+        # Desktop
+        - xdg-desktop-portal-hyprland
+        - hyprland
+        - uwsm
+        - hyprpolkitagent
+        - noctalia-git
+        - noctalia-greeter-git
+        - adw-gtk3-theme
+        - nwg-look
+        - qt5ct
+        - qt6ct
+        - kvantum
+        - plasma-breeze
+        - breeze-gtk
+        - quickshell
+
         # Browser
         - helium-bin
+
         # Applications
         - code
+        - dolphin
+        - file-roller
+        - gwenview
+        - mpv
+        - okular
     replace:
       - from-repo: fedora
         packages:

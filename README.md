@@ -10,12 +10,20 @@ It was created using the [BlueBuild Workshop](https://workshop.blue-build.org/).
 
 ## Changes made
 
-### System packages added
+### Desktop
 
+- [Hyprland](https://github.com/hyprwm/hyprland)
+- [Noctalia](https://github.com/noctalia-dev/noctalia)
+- [Quickshell](https://git.outfoxxed.me/quickshell/quickshell)
+
+### System tools
+
+- [Kitty Terminal](https://github.com/kovidgoyal/kitty)
+- [Dolphin File Manager](https://github.com/kde/dolphin)
 - Everything needed for [LazyVim](https://github.com/lazyvim/lazyvim)
   - [Neovim](https://github.com/neovim/neovim)
   - [LazyGit](https://github.com/jesseduffield/lazygit)
-  - JetBrains Mono Nerd Font from [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
+  - Nerd Fonts from [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
   - Etc.
 - [starship](https://github.com/starship/starship)
 - [btop](https://github.com/aristocratos/btop)
@@ -24,6 +32,10 @@ It was created using the [BlueBuild Workshop](https://workshop.blue-build.org/).
 - Docker CLI
 - Podman Compose
 - VS Code
+- file-roller
+- gwenview
+- mpv
+- okular
 
 ### Brew
 
@@ -35,7 +47,6 @@ It was created using the [BlueBuild Workshop](https://workshop.blue-build.org/).
 
 - [Dev Toolbox](https://flathub.org/en/apps/me.iepure.devtoolbox)
 - [Easy Effects](https://flathub.org/en/apps/com.github.wwmm.easyeffects)
-- [File Roller](https://flathub.org/en/apps/org.gnome.FileRoller)
 - [Flatseal](https://flathub.org/en/apps/com.github.tchx84.Flatseal)
 - [Gear Lever](https://flathub.org/en/apps/it.mijorus.gearlever)
 - [LocalSend](https://flathub.org/en/apps/org.localsend.localsend_app)

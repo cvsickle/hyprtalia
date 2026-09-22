@@ -15,7 +15,6 @@ modules:
           - io.podman_desktop.PodmanDesktop # GUI for managing containers
           - com.github.tchx84.Flatseal # GUI for managing Flatpak permissions
           - com.interversehq.qView # Image viewer
-          - org.gnome.FileRoller # Archive manager
           - me.iepure.devtoolbox # Handy developer tools
           - org.localsend.localsend_app # Local file sharing app
       - scope: user # Also add Flathub user repo, but no user packages
