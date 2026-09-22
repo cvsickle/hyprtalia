@@ -5,4 +5,16 @@ modules:
   - type: fonts
     fonts:
       nerd-fonts:
+        - CaskaydiaMono
+        - DaddyTimeMono
+        - DroidSansM
+        - FiraCode
+        - GoMono
+        - GoogleSansCode
+        - Hack
+        - Iosevka
         - JetBrainsMono
+        - Lilex
+        - Monofur
+        - Mononoki
+        - Noto
