@@ -36,7 +36,6 @@ modules:
         - fd-find
 
         # Desktop
-        - wayland-protocols
         - xdg-desktop-portal-hyprland
         - hyprland
         - uwsm
