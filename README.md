@@ -20,6 +20,7 @@ It was created using the [BlueBuild Workshop](https://workshop.blue-build.org/).
 
 - [Kitty Terminal](https://github.com/kovidgoyal/kitty)
 - [Dolphin File Manager](https://github.com/kde/dolphin)
+- [Tailscale](https://tailscale.com/)
 - Everything needed for [LazyVim](https://github.com/lazyvim/lazyvim)
   - [Neovim](https://github.com/neovim/neovim)
   - [LazyGit](https://github.com/jesseduffield/lazygit)

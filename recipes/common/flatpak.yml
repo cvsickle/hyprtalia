@@ -8,6 +8,7 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
+          - io.github.kolunmi.Bazaar # Flatpak app manager
           - com.github.wwmm.easyeffects # Audio effects and EQ
           - it.mijorus.gearlever # Manage AppImages
           - net.codelogistics.webapps # Manage Web Apps
