@@ -8,6 +8,7 @@ modules:
         - greetd
         - ublue-system-setup.service
         - chronyd.service
+        - tailscaled
     user:
       enabled:
         - podman.socket
