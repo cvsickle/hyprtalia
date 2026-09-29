@@ -37,31 +37,76 @@ modules:
           - old: tuned-ppd
             new: power-profiles-daemon
 
-  # Non-Fedora packages
+  # Tailscale
+  - type: dnf
+    repos:
+      files:
+        - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+      cleanup: true
+    install:
+      packages:
+        - tailscale
+
+  # VS Code
+  - type: dnf
+    repos:
+      files:
+        - https://packages.microsoft.com/yumrepos/vscode/config.repo
+      keys:
+        - https://packages.microsoft.com/keys/microsoft.asc
+      cleanup: true
+    install:
+      packages:
+        - code
+
+  # Universal Blue
+  - type: dnf
+    repos:
+      copr:
+        - ublue-os/packages
+      cleanup: true
+    install:
+      packages:
+        - ublue-setup-services
+
+  # Starship
   - type: dnf
     repos:
       copr:
         - atim/starship
-        - dejan/lazygit
-        - imput/helium
-        - lihaohong/yazi
-        - ublue-os/packages
-      keys:
-        - https://packages.microsoft.com/keys/microsoft.asc
-        - https://pkgs.tailscale.com/stable/fedora/repo.gpg
       cleanup: true
     install:
       packages:
-        # System utilities
-        - ublue-setup-services
-        - tailscale
-        # Terminal utilities
         - starship
+
+  # Lazygit
+  - type: dnf
+    repos:
+      copr:
+        - dejan/lazygit
+      cleanup: true
+    install:
+      packages:
         - lazygit
-        # Browser
+
+  # Helium browser
+  - type: dnf
+    repos:
+      copr:
+        - imput/helium
+      cleanup: true
+    install:
+      packages:
         - helium-bin
-        # Applications
-        - code
+
+  # Yazi
+  - type: dnf
+    repos:
+      copr:
+        - lihaohong/yazi
+      cleanup: true
+    install:
+      packages:
         - yazi
 
   # Hyprland & Noctalia packages
